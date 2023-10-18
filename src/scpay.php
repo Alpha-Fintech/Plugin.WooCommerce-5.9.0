@@ -6,17 +6,17 @@ class scpay extends WC_Payment_Gateway
     {
         $this->id = "scPay";
 
-        $this->method_title = __("Share Commerce", 'scPay');
+        $this->method_title = __("SC Payments", 'scPay');
 
-        $this->method_description = __("Share Commerce Payment Gateway Plug-in for WooCommerce", 'scPay');
+        $this->method_description = __("SC Payments Gateway Plug-in for WooCommerce", 'scPay');
 
-        $this->title = __("Share Commerce", 'scPay');
+        $this->title = __("SC Payments", 'scPay');
 
         $this->hash_type = 'sha256';
 
         $this->environment_mode = 'test';
 
-        $this->icon = 'https://sharecommerce-pg.oss-ap-southeast-3.aliyuncs.com/share-commerce-logo.png';
+        $this->icon = 'https://scpayment-oss-ap-southeast-3.scpayments.com.my/logo/scpayment-logo.png';
 
         $this->has_fields = true;
 
@@ -47,7 +47,7 @@ class scpay extends WC_Payment_Gateway
                 'default' => 'no',
             ),
             'title' => array(
-                'title' => __('Title', 'Share Commerce'),
+                'title' => __('Title', 'SC Payments'),
                 'type' => 'text',
                 'desc_tip' => __('Payment title the customer will see during the checkout process.', 'scPay'),
                 'default' => __('SCPay', 'scPay'),
@@ -62,12 +62,12 @@ class scpay extends WC_Payment_Gateway
             'merchantid' => array(
                 'title' => __('Merchant ID', 'scPay'),
                 'type' => 'text',
-                'desc_tip' => __('Merchant ID can obtain from Share Commerce', 'scPay'),
+                'desc_tip' => __('Merchant ID can obtain from SC Payments', 'scPay'),
             ),
             'secretkey' => array(
                 'title' => __('Secret Key', 'scPay'),
                 'type' => 'text',
-                'desc_tip' => __('Merchant Key can obtain from Share Commerce', 'scPay'),
+                'desc_tip' => __('Merchant Key can obtain from SC Payments', 'scPay'),
             ),
             'hash_type' => array(
                 'title' => __('Hash Type', 'scPay'),
@@ -177,9 +177,9 @@ class scpay extends WC_Payment_Gateway
         $query_string = substr($query_string, 0, -1);
 
         if ($this->environment_mode == 'test') {
-            $environment_url = 'https://staging.payment.share-commerce.com/Payment';
+            $environment_url = 'https://stagingpayment.scpayments.com.my/Payment';
         } else {
-            $environment_url = 'https://payment.share-commerce.com/Payment';
+            $environment_url = 'https://payment.scpayments.com.my/Payment';
         }
 
         // echo "<PRE>";

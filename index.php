@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name: Share Commerce Payment
+ * Plugin Name: SC Payments
  * Plugin URI: https://share-commerce.com
- * Description: Share Commerce Payment 
+ * Description: SC Payments
  * Version: 1.0.0
- * Author: Share Commerce
+ * Author: SC Payments
  * Author URI: https://share-commerce.com
  * WC requires at least: 4.3
  * WC tested up to: 5.8.1
